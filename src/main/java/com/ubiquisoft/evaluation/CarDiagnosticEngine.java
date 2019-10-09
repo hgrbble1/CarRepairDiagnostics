@@ -126,8 +126,14 @@ public class CarDiagnosticEngine {
 	}
 
 	public static void main (String[]args) throws JAXBException {
+		/**
+		 * SampleCar --- the original one has damaged Parts.
+		 * SampleCar2 --- is Missing Field Values.
+		 * SampleCar3 --- Is the qualified car and will pass all test.
+		 * SampleCar4 --- Is missing Parts: Electrical and 1 Tire.
+		 */
 		// Load classpath resource
-		InputStream xml = ClassLoader.getSystemResourceAsStream("SampleCar3.xml");
+		InputStream xml = ClassLoader.getSystemResourceAsStream("SampleCar4.xml");
 
 		// Verify resource was loaded properly
 		if (xml == null) {
